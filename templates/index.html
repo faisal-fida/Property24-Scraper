@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Property Search</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter search text</h1>
+      <form action="/search" method="post">
+        <input type="text" name="search_text" required />
+        <div class="radio">
+          <label>
+            <input
+              type="radio"
+              name="search_type"
+              value="for-sale"
+              required
+            />For Sale</label
+          >
+
+          <label>
+            <input type="radio" name="search_type" value="to-rent" required />To
+            Rent</label
+          >
+        </div>
+        <button type="submit">Search</button>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+      </form>
+
+      <div id="suggestions-container">
+        {% if suggestions %}
+        <h2>Suggestions</h2>
+        <ul>
+          {% for suggestion in suggestions %}
+          <li>
+            {{ loop.index }}.
+            <a
+              href="{{ suggestion[1] }}"
+              target="_blank"
+              rel="noopener"
+              rel="noreferrer"
+              style="text-decoration: none"
+              >{{ suggestion[0] }}</a
+            >
+          </li>
+          <form action="/select" method="post">
+            <input type="hidden" name="search_text" value="{{ search_text }}" />
+            <input
+              type="hidden"
+              name="suggestion_index"
+              value="{{ loop.index }}"
+            />
+            <button type="submit">Download properties</button>
+          </form>
+
+          <!-- <form action="/download" method="post" style="display: inline">
+            <input type="hidden" name="suggestion" value="{{ suggestion }}" />
+            <button type="submit" class="download-button">
+              Download Properties
+            </button>
+          </form> -->
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
