@@ -3,7 +3,7 @@ from requests.adapters import HTTPAdapter
 from pydantic import BaseModel, ValidationError
 from typing import List, Dict
 
-from scraper.config import suggestion_url, search_url, retries, logging
+from scraper.config import suggestion_url, build_search_url, retries, logging  # noqa: F401
 
 
 class Suggestion(BaseModel):
@@ -20,6 +20,7 @@ class Property24Client:
         self.session = requests.Session()
         self.session.mount("https://", HTTPAdapter(max_retries=retries))
         self.cache = {}
+        self.suggestions = []
 
     def get_property_suggestions(
         self, search_text: str, search_type: str = "for-sale"
@@ -32,31 +33,28 @@ class Property24Client:
             logging.info(f"Fetching suggestions for {search_text}")
             response = self.session.get(suggestion_url.format(search_text=search_text))
             response.raise_for_status()
-            properties = self.parse_response(response.json(), search_type)
-            self.cache[search_text] = properties
+            self.suggestions = self.parse_response(response.json(), search_type)
+            self.cache[search_text] = self.suggestions
             logging.info(f"Returning suggestions for {search_text}")
-            return properties
+            return self.suggestions
         except (requests.RequestException, ValidationError) as e:
             logging.error(f"Failed to fetch suggestions for {search_text}: {e}")
             return []
 
     def parse_response(self, response_json: Dict, search_type: str) -> List[str]:
         try:
-            suggestions = [Suggestion(**suggestion) for suggestion in response_json]
-            properties = [
-                (suggestion.name, self.build_search_url(suggestion, search_type))
-                for suggestion in suggestions
+            self.suggestions = [
+                Suggestion(**suggestion) for suggestion in response_json
             ]
-            return properties
+            self.suggestions = [
+                {
+                    "id": suggestion.id,
+                    "name": suggestion.name,
+                    "search_type": search_type,
+                }
+                for suggestion in self.suggestions
+            ]
+            return self.suggestions
         except ValidationError as e:
             logging.error(f"Failed to parse response: {e}")
             return []
-
-    def build_search_url(self, suggestion: Suggestion, search_type: str) -> str:
-        search_type = search_type.lower()
-
-        if search_type not in ["for-sale", "to-rent"]:
-            logging.error(f"Invalid search type: {search_type}")
-            return ""
-
-        return search_url.format(search_type=search_type, suggestion=suggestion)

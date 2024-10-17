@@ -1,0 +1,60 @@
+2024-10-17 04:22:29 - INFO - Fetching suggestions for ss
+2024-10-17 04:22:33 - ERROR - Failed to fetch suggestions for ss: HTTPSConnectionPool(host='www.property24.com', port=443): Max retries exceeded with url: /autocomplete/area-suggestions?searchText=ss (Caused by ResponseError('too many 503 error responses'))
+2024-10-17 04:23:34 - INFO - Fetching suggestions for a
+2024-10-17 04:23:38 - ERROR - Failed to fetch suggestions for a: HTTPSConnectionPool(host='www.property24.com', port=443): Max retries exceeded with url: /autocomplete/area-suggestions?searchText=a (Caused by ResponseError('too many 503 error responses'))
+2024-10-17 05:57:24 - INFO - Fetching suggestions for a
+2024-10-17 05:57:58 - INFO - Fetching suggestions for s
+2024-10-17 05:58:06 - INFO - Fetching suggestions for ll
+2024-10-17 05:59:41 - INFO - Fetching suggestions for ss
+2024-10-17 05:59:54 - INFO - Returning cached suggestions.
+2024-10-17 06:01:16 - INFO - Returning cached suggestions.
+2024-10-17 06:02:31 - INFO - Fetching suggestions for SAE Business Park
+2024-10-17 06:02:36 - INFO - Returning cached suggestions.
+2024-10-17 06:03:03 - INFO - Returning cached suggestions.
+2024-10-17 06:05:55 - INFO - Returning cached suggestions.
+2024-10-17 06:07:43 - INFO - Fetching suggestions for ss
+2024-10-17 06:07:43 - ERROR - Failed to get suggestions: 'list' object has no attribute 'get'
+2024-10-17 06:07:46 - INFO - Fetching suggestions for s
+2024-10-17 06:07:46 - ERROR - Failed to get suggestions: 'list' object has no attribute 'get'
+2024-10-17 06:08:05 - INFO - Fetching suggestions for dd
+2024-10-17 06:08:07 - INFO - Fetching suggestions for d
+2024-10-17 06:09:42 - INFO - Fetching suggestions for s
+2024-10-17 06:11:28 - INFO - Fetching suggestions for dd
+2024-10-17 06:12:28 - INFO - Fetching suggestions for ss
+2024-10-17 06:12:46 - INFO - Fetching suggestions for ss
+2024-10-17 06:16:00 - INFO - Fetching suggestions for ss
+2024-10-17 06:16:20 - INFO - Fetching suggestions for ss
+2024-10-17 06:16:48 - INFO - Fetching suggestions for Grasslands
+2024-10-17 06:17:08 - INFO - Fetching suggestions for Peerless Park East
+2024-10-17 06:18:18 - INFO - Returning cached suggestions.
+2024-10-17 06:18:34 - INFO - Returning cached suggestions.
+2024-10-17 06:19:27 - INFO - Returning cached suggestions.
+2024-10-17 06:19:44 - INFO - Fetching suggestions for ss
+2024-10-17 06:20:06 - INFO - Downloading properies: ['9665', '10204', '5279', '1527', '14745', '323', '17495', '7463'] <class 'list'>
+2024-10-17 06:20:07 - INFO - Downloading properies: ['9665', '10204', '5279', '1527', '14745', '323', '17495', '7463'] <class 'list'>
+2024-10-17 06:20:19 - INFO - Fetching suggestions for Bloemfontein
+2024-10-17 06:22:15 - INFO - Returning cached suggestions.
+2024-10-17 06:23:49 - INFO - Returning cached suggestions.
+2024-10-17 06:26:05 - INFO - Returning cached suggestions.
+2024-10-17 06:28:16 - INFO - Returning cached suggestions.
+2024-10-17 06:28:47 - INFO - Fetching suggestions for liverpool
+2024-10-17 06:31:50 - INFO - Fetching suggestions for SAE Business Park
+2024-10-17 06:32:46 - INFO - Returning cached suggestions.
+2024-10-17 06:35:24 - INFO - Returning cached suggestions.
+2024-10-17 06:35:39 - INFO - Returning cached suggestions.
+2024-10-17 06:38:32 - INFO - Returning cached suggestions.
+2024-10-17 06:39:09 - INFO - Returning cached suggestions.
+2024-10-17 06:39:38 - INFO - Returning cached suggestions.
+2024-10-17 06:40:22 - INFO - Returning cached suggestions.
+2024-10-17 06:40:32 - INFO - Returning cached suggestions.
+2024-10-17 06:40:48 - INFO - Fetching suggestions for sava
+2024-10-17 06:41:18 - INFO - Returning cached suggestions.
+2024-10-17 06:41:39 - INFO - Returning cached suggestions.
+2024-10-17 06:41:52 - INFO - Returning cached suggestions.
+2024-10-17 06:43:01 - INFO - Fetching suggestions for liverp
+2024-10-17 06:43:41 - INFO - Returning cached suggestions.
+2024-10-17 06:43:44 - INFO - Returning cached suggestions.
+2024-10-17 06:43:47 - INFO - Fetching suggestions for dsads
+2024-10-17 06:43:49 - INFO - Fetching suggestions for das
+2024-10-17 06:44:18 - INFO - Fetching suggestions for Bredasdorp
+2024-10-17 07:15:47 - INFO - Fetching suggestions for Bredasdorp

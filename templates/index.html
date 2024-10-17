@@ -1,72 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Property Search</title>
     <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="/static/favicon.ico"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>Enter search text</h1>
-      <form action="/search" method="post">
-        <input type="text" name="search_text" required />
-        <div class="radio">
-          <label>
-            <input
-              type="radio"
-              name="search_type"
-              value="for-sale"
-              required
-            />For Sale</label
-          >
-
-          <label>
-            <input type="radio" name="search_type" value="to-rent" required />To
-            Rent</label
-          >
-        </div>
-        <button type="submit">Search</button>
-
-        {% if error %}
-        <p class="error">{{ error }}</p>
-        {% endif %}
-      </form>
-
-      <div id="suggestions-container">
-        {% if suggestions %}
-        <h2>Suggestions</h2>
-        <ul>
-          {% for suggestion in suggestions %}
-          <li>
-            {{ loop.index }}.
-            <a
-              href="{{ suggestion[1] }}"
-              target="_blank"
-              rel="noopener"
-              rel="noreferrer"
-              style="text-decoration: none"
-              >{{ suggestion[0] }}</a
-            >
-          </li>
-          <form action="/select" method="post">
-            <input type="hidden" name="search_text" value="{{ search_text }}" />
-            <input
-              type="hidden"
-              name="suggestion_index"
-              value="{{ loop.index }}"
-            />
-            <button type="submit">Download properties</button>
-          </form>
-
-          <!-- <form action="/download" method="post" style="display: inline">
-            <input type="hidden" name="suggestion" value="{{ suggestion }}" />
-            <button type="submit" class="download-button">
-              Download Properties
+      <main>
+        <section class="search-section">
+          <h2>Property Scrapper</h2>
+          <form class="search-form" action="/search" method="post">
+            <div class="form-group">
+              <label for="search-input">Location:</label>
+              <input
+                type="text"
+                id="search-input"
+                name="search_text"
+                placeholder="e.g., Liverpool"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <fieldset>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      name="search_type"
+                      value="for-sale"
+                      required
+                      checked
+                    />
+                    <span class="radio-text">Buy</span>
+                  </label>
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      name="search_type"
+                      value="to-rent"
+                      required
+                    />
+                    <span class="radio-text">Rent</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Scrape Properties
             </button>
-          </form> -->
-          {% endfor %}
-        </ul>
+          </form>
+          {% if error %}
+          <p class="error">{{ error }}</p>
+          {% endif %}
+        </section>
+
+        {% if suggestions %}
+        <section class="suggestions-section">
+          <h2>Properties</h2>
+          <p><strong>{{ suggestions|length }}</strong> properties found.</p>
+
+          <form class="suggestions-form" action="/download" method="post">
+            <ul class="suggestions-list">
+              {% for suggestion in suggestions %}
+              <li class="suggestion-item">
+                <label class="suggestion-label">
+                  <input
+                    type="checkbox"
+                    name="selected_suggestions"
+                    value="{{ suggestion['id'] }}"
+                  />
+                  <span class="suggestion-text"
+                    >{{ suggestion['address'] }}</span
+                  >
+                </label>
+              </li>
+              {% endfor %}
+            </ul>
+            <button class="btn btn-secondary" type="submit">
+              Download Selected
+            </button>
+          </form>
+        </section>
         {% endif %}
-      </div>
+      </main>
     </div>
   </body>
 </html>
