@@ -6,8 +6,8 @@ from fastapi.templating import Jinja2Templates
 from contextlib import asynccontextmanager
 import zipfile
 import os
-from scraper.config import logging
 
+from scraper.config import logging
 from scraper.search import SearchSuggestions
 
 
@@ -42,20 +42,6 @@ async def search(
 
 @app.post("/download")
 async def download(request: Request, selected_suggestions: list[str] = Form(...)):
-    # scraped_data = []
-    # for url in selected_suggestions:
-    #     data = scrape_properties(url)
-    #     scraped_data.append(data)
-
-    # zip_filename = "scraped_properties.zip"
-    # with zipfile.ZipFile(zip_filename, "w") as zipf:
-    #     for i, data in enumerate(scraped_data):
-    #         file_name = f"property_{i+1}.txt"
-    #         with open(file_name, "w") as f:
-    #             f.write(data)
-    #         zipf.write(file_name)
-    #         os.remove(file_name)
-
     logging.info(
         f"Downloading properies: {selected_suggestions} {type(selected_suggestions)}"
     )
