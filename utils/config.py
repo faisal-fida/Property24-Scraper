@@ -4,24 +4,48 @@ import logging
 
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    handlers=[logging.FileHandler("app.log")],
+    format="%(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("scraper.log")],
 )
 
 
 base_url = "https://www.property24.com"
 
-suggest_file = "scraper/input/suggestions.json"
-norm_suggest_file = "scraper/input/norm_suggestions.json"
+suggest_file = "utils/input/suggestions.json"
+norm_suggest_file = "utils/input/norm_suggestions.json"
 
-cookies = {
-    "P24UUEYED": "Id%3Dkpcghzvgv1ekcbsov5lfet2z%26Date%3D638646147517108882",
-    "P24CPA": "2021-06-29T00:27:41.2870000",
-    "P24U": "%7B%22CityId%22%3A246%2C%22AutomaticallySendReportedListingConfirmationEmail%22%3Atrue%2C%22UserNotificationUIState%22%3A0%2C%22ExpectedUnreadNotificationCount%22%3A0%7D",
-    "P24SEYED": "13904585-d743-44d9-ada0-1659bd208883",
-    "__RequestVerificationToken": "CfDJ8JEQbpTk1lRChYiZH2_9kOWUjHRxqwxXKotpFxaryVNoA5WxNILIwf3R45Eb9B-757Bb8vQnGqCLQ3u3qMG9_3sL2eWanHkqRQd9sgfcTzy1LkUb5Nl3kRGxsFCFD1tm1MwhFfNIArvdmAXe3NUIvXw",
-}
+cookies = [
+    {
+        "name": "P24UUEYED",
+        "value": "Id%3Dkpcghzvgv1ekcbsov5lfet2z%26Date%3D638646147517108882",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+    {
+        "name": "P24CPA",
+        "value": "2021-06-29T00:27:41.2870000",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+    {
+        "name": "P24U",
+        "value": "%7B%22CityId%22%3A246%2C%22AutomaticallySendReportedListingConfirmationEmail%22%3Atrue%2C%22UserNotificationUIState%22%3A0%2C%22ExpectedUnreadNotificationCount%22%3A0%7D",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+    {
+        "name": "P24SEYED",
+        "value": "13904585-d743-44d9-ada0-1659bd208883",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+    {
+        "name": "__RequestVerificationToken",
+        "value": "CfDJ8JEQbpTk1lRChYiZH2_9kOWUjHRxqwxXKotpFxaryVNoA5WxNILIwf3R45Eb9B-757Bb8vQnGqCLQ3u3qMG9_3sL2eWanHkqRQd9sgfcTzy1LkUb5Nl3kRGxsFCFD1tm1MwhFfNIArvdmAXe3NUIvXw",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+]
 
 headers = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",

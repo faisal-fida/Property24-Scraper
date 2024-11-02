@@ -1,32 +1,10 @@
 from bs4 import BeautifulSoup
 
 
-class Parser:
-    def __init__(self, pagination_selector, data_selector):
-        self.pagination_selector = pagination_selector
-        self.data_selector = data_selector
-
-    def parse_html(self, content):
-        return BeautifulSoup(content, "html.parser")
-
-    def get_next_page(self, soup):
-        next_page = soup.select_one(self.pagination_selector)
-        if next_page and "href" in next_page.attrs:
-            return next_page["href"]
-        return None
-
-    def parse(self, content):
-        soup = self.parse_html(content)
-        data = [item.text.strip() for item in soup.select(self.data_selector)]
-        next_page = self.get_next_page(soup)
-        return data, next_page
-
-
-class PropertyParser(Parser):
+class PropertyParser:
     def __init__(self):
-        super().__init__(
-            pagination_selector=".pagination a.next",
-            data_selector=".js_listingResultsContainer [class*='js_resultTile p24_tileContainer']",
+        self.data_selector = (
+            ".js_listingResultsContainer [class*='js_resultTile p24_tileContainer']"
         )
 
     def parse_property(self, result):
@@ -74,9 +52,8 @@ class PropertyParser(Parser):
         }
 
     def parse(self, content):
-        soup = self.parse_html(content)
+        soup = BeautifulSoup(content, "html.parser")
         data = [
             self.parse_property(result) for result in soup.select(self.data_selector)
         ]
-        next_page = self.get_next_page(soup)
-        return data, next_page
+        return data

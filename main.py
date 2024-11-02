@@ -7,8 +7,8 @@ from contextlib import asynccontextmanager
 import zipfile
 import os
 
-from scraper.config import logging
-from scraper.search import SearchSuggestions
+from utils.config import logging
+from utils.search import SearchSuggestions
 
 
 @asynccontextmanager

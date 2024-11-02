@@ -1,7 +1,7 @@
 import os
 import json
 from typing import List, Dict
-from scraper.config import logging, suggest_file, norm_suggest_file
+from utils.config import logging, suggest_file, norm_suggest_file
 
 
 class SearchSuggestions:

@@ -8,9 +8,9 @@ from utils.config import logging
 def save_properties(parser, scraper):
     logging.info("Saving properties to json file")
     with open("properties.json", "w") as file:
-        for property in scraper.scrape(parser):
-            json.dump(property, file)
-            file.write("\n")
+        data = scraper.scrape(parser)
+        json.dump(data, file, indent=4)
+        logging.info("Properties saved to properties.json")
 
 
 def scrape_properties(base_url: str) -> None:
@@ -20,5 +20,4 @@ def scrape_properties(base_url: str) -> None:
     save_properties(parser, scraper)
 
 
-# from web_scraper.main import scrape_properties
-# scrape_properties("https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d755")
+# from web_scraper.main import scrape_properties; scrape_properties("https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d2470")

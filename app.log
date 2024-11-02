@@ -1,3 +1,0 @@
-2024-10-19 13:45:09 - INFO - Starting web scraper
-2024-10-19 13:45:09 - INFO - Saving properties to json file
-2024-10-19 13:45:14 - ERROR - Request failed: HTTPSConnectionPool(host='www.property24.com', port=443): Max retries exceeded with url: /for-sale/advanced-search/results?sp=cid%3D2470 (Caused by ResponseError('too many 503 error responses'))
