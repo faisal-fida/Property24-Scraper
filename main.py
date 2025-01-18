@@ -4,12 +4,12 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from contextlib import asynccontextmanager
-import zipfile
 import os
 
 from utils.config import logging
 from utils.search import SearchSuggestions
 
+from web_scraper.main import scrape_properties
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -32,41 +32,34 @@ async def read_root(request: Request):
 
 @app.post("/search", response_class=HTMLResponse)
 async def search(
-    request: Request, search_text: str = Form(...), search_type: str = Form(...)
+    request: Request, search_text: str = Form(...)
 ):
-    suggestions = search_suggestions.get_property_suggestions(search_text, search_type)
+    suggestions = search_suggestions.get_property_suggestions(search_text)
     return templates.TemplateResponse(
         "index.html", {"request": request, "suggestions": suggestions}
     )
 
 
 @app.post("/download")
-async def download(request: Request, selected_suggestions: list[str] = Form(...)):
+async def download(
+    request: Request, 
+    selected_suggestions: list[str] = Form(...),
+    search_type: str = Form(...)
+):
     logging.info(
-        f"Downloading properies: {selected_suggestions} {type(selected_suggestions)}"
+        f"Starting download of properties for the following suggestions: {selected_suggestions}"
     )
 
-    sample_data = [
-        "Property 1",
-        "Property 2",
-        "Property 3",
-        "Property 4",
-        "Property 5",
-    ]
+    if os.path.exists("properties.csv"):
+        os.remove("properties.csv")
 
-    zip_filename = "sample_properties.zip"
+    if not selected_suggestions:
+        return {"error": "No properties selected"}
+        
+    df = await scrape_properties(selected_suggestions, search_type)
+    df.to_csv("properties.csv", index=False)
+    return FileResponse("properties.csv")
 
-    with zipfile.ZipFile(zip_filename, "w") as zipf:
-        for i, data in enumerate(sample_data):
-            file_name = f"property_{i+1}.txt"
-            with open(file_name, "w") as f:
-                f.write(data)
-            zipf.write(file_name)
-            os.remove(file_name)
-
-    return FileResponse(
-        zip_filename, media_type="application/zip", filename=zip_filename
-    )
 
 
 if __name__ == "__main__":

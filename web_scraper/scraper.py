@@ -1,27 +1,25 @@
-import time
-from playwright.sync_api import sync_playwright, Browser, BrowserContext
+import asyncio
+from playwright.async_api import async_playwright, Browser, BrowserContext 
 from utils.config import logging, cookies, headers
 
-
 class WebScraper:
-    def __init__(self, base_url, sleep_time=0):
+    def __init__(self, sleep_time=0):
         self.sleep_time = sleep_time
         self.browser = None
         self.context = None
         self.page_no = 1
         self.url_parts = None
-        self.base_url = base_url
 
     @staticmethod
-    def initialize_browser(playwright) -> (BrowserContext, Browser):
-        browser = playwright.chromium.launch(
-            headless=False,
+    async def initialize_browser(playwright) -> tuple[BrowserContext, Browser]:
+        browser = await playwright.chromium.launch(
+            headless=True,
             channel="chrome",
             args=[
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
                 "--disable-dev-shm-usage",
-                "--disable-gpu",
+                "--disable-gpu", 
                 "--start-maximized",
                 "--disable-infobars",
                 "--disable-background-networking",
@@ -36,35 +34,34 @@ class WebScraper:
                 "--blink-settings=imagesEnabled=false",
             ],
         )
-        context = browser.new_context()
-        context.set_extra_http_headers(headers)
-        context.add_cookies(cookies)
+        context = await browser.new_context()
+        await context.set_extra_http_headers(headers)
+        await context.add_cookies(cookies)
         return context, browser
 
-    def scrape(self, parser):
-        with sync_playwright() as playwright:
-            self.context, self.browser = self.initialize_browser(playwright)
-            page = self.context.new_page()
+    async def scrape(self, parser, url):
+        async with async_playwright() as playwright:
+            self.context, self.browser = await self.initialize_browser(playwright)
+            page = await self.context.new_page()
             try:
-                return self._scrape_pages(page, parser)
+                return await self._scrape_pages(page, parser, url)
             finally:
-                self.context.close()
-                self.browser.close()
+                await self.context.close()
+                await self.browser.close()
 
-    def _visit_url(self, url, page):
+    async def _visit_url(self, url, page):
         try:
-            page.goto(url)
-            page.wait_for_selector("body")
-            return page.content()
+            await page.goto(url)
+            await page.wait_for_selector("body")
+            return await page.content()
         except Exception as e:
             logging.error(f"Error making request to {url}: {e}")
             return None
 
-    def _scrape_pages(self, page, parser):
-        url = self.base_url
+    async def _scrape_pages(self, page, parser, url):
         properties = []
         while url:
-            response = self._visit_url(url, page)
+            response = await self._visit_url(url, page)
             if response:
                 data = parser.parse(response)
                 properties.extend(data)
