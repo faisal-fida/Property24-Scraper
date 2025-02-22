@@ -2,3 +2,4 @@ requests
 playwright
 bs4
 pandas
+inquirer
