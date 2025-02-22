@@ -1,60 +1,97 @@
-from bs4 import BeautifulSoup
+from typing import Dict, List, Optional
+from bs4 import BeautifulSoup, Tag
+from dataclasses import dataclass
+from config import logging
+
+
+@dataclass
+class PropertyData:
+    """Data class to store property information"""
+
+    listing_number: str
+    title: Optional[str] = None
+    price: Optional[str] = None
+    location: Optional[str] = None
+    description: Optional[str] = None
+    bedrooms: Optional[str] = None
+    bathrooms: Optional[str] = None
+    parking_spaces: Optional[str] = None
+    erf_size: Optional[str] = None
 
 
 class PropertyParser:
+    """Parser for Property24 listing results"""
+
     def __init__(self):
         self.data_selector = (
             ".js_listingResultsContainer [class*='js_resultTile p24_tileContainer']"
         )
-
-    def parse_property(self, result):
-        listing_number = result.get("data-listing-number")
-        title_meta = result.find("meta", itemprop="name")
-        title = title_meta.get("content") if title_meta else None
-        price_span = result.find("span", class_="p24_price")
-        price = price_span.get_text(strip=True) if price_span else None
-        location_span = result.find("span", class_="p24_location")
-        location = location_span.get_text(strip=True) if location_span else None
-        description_span = result.find("span", class_="p24_excerpt")
-        description = (
-            description_span.get("title")
-            + description_span.get_text(strip=True).replace("...", "")
-            if description_span
-            else None
-        )
-        bedrooms_span = result.find("span", title="Bedrooms")
-        bedrooms = (
-            bedrooms_span.find("span").get_text(strip=True) if bedrooms_span else None
-        )
-        bathrooms_span = result.find("span", title="Bathrooms")
-        bathrooms = (
-            bathrooms_span.find("span").get_text(strip=True) if bathrooms_span else None
-        )
-        parking_spaces_span = result.find("span", title="Parking Spaces")
-        parking_spaces = (
-            parking_spaces_span.find("span").get_text(strip=True)
-            if parking_spaces_span
-            else None
-        )
-        erf_size_span = result.find("span", title="Erf Size")
-        erf_size = (
-            erf_size_span.find("span").get_text(strip=True) if erf_size_span else None
-        )
-        return {
-            "listing_number": listing_number,
-            "title": title,
-            "price": price,
-            "location": location,
-            "description": description,
-            "bedrooms": bedrooms,
-            "bathrooms": bathrooms,
-            "parking_spaces": parking_spaces,
-            "erf_size": erf_size,
+        self._field_selectors = {
+            "title": ("meta", {"itemprop": "name"}, "content"),
+            "price": ("span", {"class_": "p24_price"}, None),
+            "location": ("span", {"class_": "p24_location"}, None),
+            "description": ("span", {"class_": "p24_excerpt"}, None),
+            "bedrooms": ("span", {"title": "Bedrooms"}, None),
+            "bathrooms": ("span", {"title": "Bathrooms"}, None),
+            "parking_spaces": ("span", {"title": "Parking Spaces"}, None),
+            "erf_size": ("span", {"class_": "p24_size"}, None),
         }
 
-    def parse(self, content):
-        soup = BeautifulSoup(content, "html.parser")
-        data = [
-            self.parse_property(result) for result in soup.select(self.data_selector)
-        ]
-        return data
+    def _extract_field(self, result: Tag, field_name: str) -> Optional[str]:
+        """Extract field value from the HTML using predefined selectors"""
+        tag_name, attrs, attr_name = self._field_selectors[field_name]
+        element = result.find(tag_name, **attrs)
+
+        if not element:
+            return None
+
+        if attr_name:
+            return element.get(attr_name)
+
+        if field_name == "description" and element:
+            return element.get("title", "") + element.get_text(strip=True).replace("...", "")
+
+        if field_name == "erf_size" and element:
+            return element.get_text(strip=True).split(" ")[0]
+
+        if field_name == "price" and element:
+            return element.get_text(strip=True).replace("R", "").replace(" ", "")
+
+        span = (
+            element.find("span")
+            if field_name in ["bedrooms", "bathrooms", "parking_spaces", "erf_size"]
+            else element
+        )
+        return span.get_text(strip=True) if span else None
+
+    def parse_property(self, result: Tag) -> PropertyData:
+        """Parse single property listing"""
+        try:
+            listing_data = {
+                "listing_number": result.get("data-listing-number", ""),
+            }
+
+            # Extract all other fields
+            for field in self._field_selectors.keys():
+                listing_data[field] = self._extract_field(result, field)
+
+            return PropertyData(**listing_data)
+
+        except Exception as e:
+            logging.error(f"Error parsing property: {str(e)}")
+            return PropertyData(listing_number="error")
+
+    def parse(self, content: str) -> List[Dict]:
+        """Parse all property listings from page content"""
+        try:
+            soup = BeautifulSoup(content, "html.parser")
+            results = soup.select(self.data_selector)
+
+            properties = [vars(self.parse_property(result)) for result in results]
+
+            logging.info(f"Successfully parsed {len(properties)} properties")
+            return properties
+
+        except Exception as e:
+            logging.error(f"Error parsing content: {str(e)}")
+            return []

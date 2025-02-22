@@ -1,26 +1,48 @@
-from web_scraper.scraper import WebScraper
-from web_scraper.parser import PropertyParser
-
-import pandas as pd
-from utils.config import logging, base_url
-
-scraper = WebScraper()
-parser = PropertyParser()
+import asyncio
+import inquirer
+from property_scraper import PropertyScraper
 
 
-async def scrape_properties(selected_suggestions: str, search_type: str) -> pd.DataFrame:
-    logging.info(f"Scraping properties from the following suggestions: {selected_suggestions}")
+async def main():
+    scraper = PropertyScraper()
 
-    if not selected_suggestions:
-        return pd.DataFrame()
+    # Define the questions for user interaction
+    questions = [
+        inquirer.Text(
+            "search_query",
+            message="Enter location to search (e.g. cape town)",
+        ),
+        inquirer.List(
+            "search_type",
+            message="Select search type",
+            choices=["for-sale", "to-rent"],
+        ),
+        inquirer.Text(
+            "pages",
+            message="Enter number of pages to scrape (e.g. 10)",
+        ),
+    ]
 
-    if not isinstance(selected_suggestions, list):
-        selected_suggestions = [selected_suggestions]
+    # Get user input
+    answers = inquirer.prompt(questions)
 
-    suggestion_ids = "%2c".join(str(id) for id in selected_suggestions)
+    if answers:  # Check if user didn't cancel
+        search_query = answers["search_query"]
+        search_type = answers["search_type"]
+        pages = int(answers["pages"])
 
-    url = f"{base_url}/{search_type}/advanced-search/results?sp=cid%3d{suggestion_ids}%26s%3d3990"
-    logging.info(f"Scraping properties from {url}")
+        print(f"\nSearching for properties {search_type} in {search_query} on {pages} pages...\n")
+        await scraper.scrape(search_query, search_type, pages)
+
+        scraper.save_results(filename=f"{search_query}_{search_type}_properties.csv")
+
+        stats = scraper.get_stats()
+        print("\nScraping Statistics:")
+        for key, value in stats.items():
+            print(f"{key}: {value}")
+    else:
+        print("Operation cancelled by user")
 
 
-# from web_scraper.main import scrape_properties; scrape_properties("https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d2462")
+if __name__ == "__main__":
+    asyncio.run(main())

@@ -1,7 +1,7 @@
 import os
 import json
 from typing import List, Dict
-from utils.config import logging, suggest_file, norm_suggest_file
+from config import logging, suggest_file, norm_suggest_file
 
 
 class SearchSuggestions:
@@ -40,9 +40,7 @@ class SearchSuggestions:
             else:
                 self.json_file_obj = self.read_json(norm_suggest_file)
 
-    def get_property_suggestions(
-        self, search_text: str
-    ) -> List[Dict]:
+    def get_property_suggestions(self, search_text: str) -> List[Dict]:
         self.load_suggestions()
 
         if search_text in self.cache:

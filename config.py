@@ -1,18 +1,34 @@
-from requests.packages.urllib3.util.retry import Retry
+import json
 import logging
+from pathlib import Path
+from requests.packages.urllib3.util.retry import Retry
 
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("scraper.log")],
-)
+logging.basicConfig(level=logging.INFO, format="%(levelname)s - %(message)s")
 
 
 base_url = "https://www.property24.com"
 
 suggest_file = "utils/input/suggestions.json"
 norm_suggest_file = "utils/input/norm_suggestions.json"
+
+
+def build_url(search_query: str, search_type: str = "for-sale") -> str:
+    """Build search URL for given query"""
+    normalized_query = search_query.lower().strip().replace(" ", "")
+
+    suggestions_path = Path(__file__).parent / "input" / "suggestions.json"
+    with open(suggestions_path) as f:
+        suggestions = json.load(f)
+
+    first_letter = normalized_query[0]
+    if first_letter in suggestions:
+        for item in suggestions[first_letter]:
+            if item.get("normalizedName") == normalized_query:
+                suggestion_id = item.get("id")
+                return f"{base_url}/{search_type}/advanced-search/results?sp=cid%3d{suggestion_id}"
+
+    raise ValueError(f"No suggestion ID found for query: {search_query}")
+
 
 cookies = [
     {
