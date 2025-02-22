@@ -1,4 +1,3 @@
-import time
 from playwright.sync_api import sync_playwright, Browser, BrowserContext
 from utils.config import logging, cookies, headers
 

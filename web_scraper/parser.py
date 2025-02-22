@@ -17,7 +17,8 @@ class PropertyParser:
         location = location_span.get_text(strip=True) if location_span else None
         description_span = result.find("span", class_="p24_excerpt")
         description = (
-            description_span.get("title") + description_span.get_text(strip=True)
+            description_span.get("title")
+            + description_span.get_text(strip=True).replace("...", "")
             if description_span
             else None
         )

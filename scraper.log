@@ -1,0 +1,58 @@
+INFO - Starting web scraper
+INFO - Saving properties to json file
+ERROR - Error making request to https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d3990: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d3990
+Call log:
+navigating to "https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d3990", waiting until "load"
+
+INFO - Properties saved to properties.json
+INFO - Starting web scraper
+INFO - Saving properties to json file
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d2462. Total: 17
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p2?sp=cid%3d2462. Total: 35
+INFO - Scraped 14 properties from https://www.property24.com/for-sale/advanced-search/results/p3?sp=cid%3d2462. Total: 49
+INFO - Scraped 15 properties from https://www.property24.com/for-sale/advanced-search/results/p4?sp=cid%3d2462. Total: 64
+INFO - Scraped 15 properties from https://www.property24.com/for-sale/advanced-search/results/p5?sp=cid%3d2462. Total: 79
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p6?sp=cid%3d2462. Total: 96
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p7?sp=cid%3d2462. Total: 112
+INFO - Scraped 19 properties from https://www.property24.com/for-sale/advanced-search/results/p8?sp=cid%3d2462. Total: 131
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p9?sp=cid%3d2462. Total: 148
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p10?sp=cid%3d2462. Total: 164
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p11?sp=cid%3d2462. Total: 181
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p12?sp=cid%3d2462. Total: 199
+INFO - Scraped 19 properties from https://www.property24.com/for-sale/advanced-search/results/p13?sp=cid%3d2462. Total: 218
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p14?sp=cid%3d2462. Total: 236
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p15?sp=cid%3d2462. Total: 253
+INFO - Scraped 15 properties from https://www.property24.com/for-sale/advanced-search/results/p16?sp=cid%3d2462. Total: 268
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p17?sp=cid%3d2462. Total: 285
+INFO - Scraped 19 properties from https://www.property24.com/for-sale/advanced-search/results/p18?sp=cid%3d2462. Total: 304
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p19?sp=cid%3d2462. Total: 320
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p20?sp=cid%3d2462. Total: 336
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p21?sp=cid%3d2462. Total: 352
+INFO - Scraped 20 properties from https://www.property24.com/for-sale/advanced-search/results/p22?sp=cid%3d2462. Total: 372
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p23?sp=cid%3d2462. Total: 389
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p24?sp=cid%3d2462. Total: 405
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p25?sp=cid%3d2462. Total: 422
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p26?sp=cid%3d2462. Total: 440
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p27?sp=cid%3d2462. Total: 458
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p28?sp=cid%3d2462. Total: 476
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p29?sp=cid%3d2462. Total: 494
+INFO - Scraped 14 properties from https://www.property24.com/for-sale/advanced-search/results/p30?sp=cid%3d2462. Total: 508
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p31?sp=cid%3d2462. Total: 524
+INFO - Scraped 15 properties from https://www.property24.com/for-sale/advanced-search/results/p32?sp=cid%3d2462. Total: 539
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p33?sp=cid%3d2462. Total: 555
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p34?sp=cid%3d2462. Total: 573
+INFO - Scraped 14 properties from https://www.property24.com/for-sale/advanced-search/results/p35?sp=cid%3d2462. Total: 587
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p36?sp=cid%3d2462. Total: 605
+INFO - Scraped 14 properties from https://www.property24.com/for-sale/advanced-search/results/p37?sp=cid%3d2462. Total: 619
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p38?sp=cid%3d2462. Total: 635
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p39?sp=cid%3d2462. Total: 652
+INFO - Scraped 16 properties from https://www.property24.com/for-sale/advanced-search/results/p40?sp=cid%3d2462. Total: 668
+INFO - Scraped 17 properties from https://www.property24.com/for-sale/advanced-search/results/p41?sp=cid%3d2462. Total: 685
+INFO - Scraped 18 properties from https://www.property24.com/for-sale/advanced-search/results/p42?sp=cid%3d2462. Total: 703
+INFO - Scraped 13 properties from https://www.property24.com/for-sale/advanced-search/results/p43?sp=cid%3d2462. Total: 716
+INFO - Scraped 14 properties from https://www.property24.com/for-sale/advanced-search/results/p44?sp=cid%3d2462. Total: 730
+ERROR - Error making request to https://www.property24.com/for-sale/advanced-search/results/p45?sp=cid%3d2462: Page.goto: net::ERR_ABORTED at https://www.property24.com/for-sale/advanced-search/results/p45?sp=cid%3d2462
+Call log:
+navigating to "https://www.property24.com/for-sale/advanced-search/results/p45?sp=cid%3d2462", waiting until "load"
+
+INFO - Properties saved to properties.json

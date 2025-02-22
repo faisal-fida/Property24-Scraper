@@ -20,4 +20,4 @@ def scrape_properties(base_url: str) -> None:
     save_properties(parser, scraper)
 
 
-# from web_scraper.main import scrape_properties; scrape_properties("https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d2470")
+# from web_scraper.main import scrape_properties; scrape_properties("https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d2462")
