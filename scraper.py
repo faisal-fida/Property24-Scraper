@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 from playwright.sync_api import sync_playwright, Browser, BrowserContext
-=======
-import asyncio
-from playwright.async_api import async_playwright, Browser, BrowserContext 
->>>>>>> 54ea97b4cfd44e9e7270bca5f4715bebb5495c10
 from utils.config import logging, cookies, headers
+
 
 class WebScraper:
     def __init__(self, sleep_time=0):
@@ -23,7 +19,7 @@ class WebScraper:
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
                 "--disable-dev-shm-usage",
-                "--disable-gpu", 
+                "--disable-gpu",
                 "--start-maximized",
                 "--disable-infobars",
                 "--disable-background-networking",
@@ -69,9 +65,7 @@ class WebScraper:
             if response:
                 data = parser.parse(response)
                 properties.extend(data)
-                logging.info(
-                    f"Scraped {len(data)} properties from {url}. Total: {len(properties)}"
-                )
+                logging.info(f"Scraped {len(data)} properties from {url}. Total: {len(properties)}")
                 url = self._get_next_page_url(url)
             else:
                 break
@@ -87,7 +81,5 @@ class WebScraper:
             return f"{self.url_parts[0]}/results/p{self.page_no}?{self.url_parts[1]}"
 
         except Exception as e:
-            logging.error(
-                f"Current URL: {current_url} Error getting next page URL: {e}"
-            )
+            logging.error(f"Current URL: {current_url} Error getting next page URL: {e}")
             return None
