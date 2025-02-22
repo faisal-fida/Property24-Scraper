@@ -30,54 +30,47 @@ def build_url(search_query: str, search_type: str = "for-sale") -> str:
     raise ValueError(f"No suggestion ID found for query: {search_query}")
 
 
-cookies = [
-    {
-        "name": "P24UUEYED",
-        "value": "Id%3Dkpcghzvgv1ekcbsov5lfet2z%26Date%3D638646147517108882",
-        "domain": ".property24.com",
-        "path": "/",
-    },
-    {
-        "name": "P24CPA",
-        "value": "2021-06-29T00:27:41.2870000",
-        "domain": ".property24.com",
-        "path": "/",
-    },
-    {
-        "name": "P24U",
-        "value": "%7B%22CityId%22%3A246%2C%22AutomaticallySendReportedListingConfirmationEmail%22%3Atrue%2C%22UserNotificationUIState%22%3A0%2C%22ExpectedUnreadNotificationCount%22%3A0%7D",
-        "domain": ".property24.com",
-        "path": "/",
-    },
-    {
-        "name": "P24SEYED",
-        "value": "13904585-d743-44d9-ada0-1659bd208883",
-        "domain": ".property24.com",
-        "path": "/",
-    },
-    {
-        "name": "__RequestVerificationToken",
-        "value": "CfDJ8JEQbpTk1lRChYiZH2_9kOWUjHRxqwxXKotpFxaryVNoA5WxNILIwf3R45Eb9B-757Bb8vQnGqCLQ3u3qMG9_3sL2eWanHkqRQd9sgfcTzy1LkUb5Nl3kRGxsFCFD1tm1MwhFfNIArvdmAXe3NUIvXw",
-        "domain": ".property24.com",
-        "path": "/",
-    },
-]
-
 headers = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
     "accept-language": "en-US,en;q=0.9",
     "cache-control": "max-age=0",
     "priority": "u=0, i",
-    "sec-ch-ua": '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"',
+    "sec-ch-ua": '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": '"Windows"',
     "sec-fetch-dest": "document",
     "sec-fetch-mode": "navigate",
-    "sec-fetch-site": "same-origin",
+    "sec-fetch-site": "none",
     "sec-fetch-user": "?1",
     "upgrade-insecure-requests": "1",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
 }
 
+cookies = [
+    {
+        "name": "P24SEYED",
+        "value": "9c5373fc-3ff0-42e6-ada9-aa9c17fc28af",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+    {
+        "name": "P24UUEYED",
+        "value": "Id%3Dvied1haebknyh4pfhvgo220w%26Date%3D638758345661655263",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+    {
+        "name": "__RequestVerificationToken",
+        "value": "CfDJ8NTOMd4UWJROu9J77O4uWdSo6bH-mkvDiVjhJTL0ewkQjTvuQbo8S3Kbkm7trNhwxl5nFq3FLBPsvpwOL9fAeGoKVIZB62Sa7FBbx5XpN-Q_VbLOJnM9DO3T2o-gd1BUTG4uWuXwaxo4zxuIt4EhREc",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+    {
+        "name": "P24U",
+        "value": "%7B%22CityId%22%3A432%2C%22AutomaticallySendReportedListingConfirmationEmail%22%3Atrue%2C%22PreviousHttpReferrer%22%3A%22https%3A%2F%2Fwww.property24.com%2Ffor-sale%2Fall-suburbs%2Fcape-town%2Fwestern-cape%2F432%22%2C%22UserNotificationUIState%22%3A0%2C%22ExpectedUnreadNotificationCount%22%3A0%7D",
+        "domain": ".property24.com",
+        "path": "/",
+    },
+]
 
 retries = Retry(total=5, backoff_factor=0.1, status_forcelist=[500, 502, 503, 504])
