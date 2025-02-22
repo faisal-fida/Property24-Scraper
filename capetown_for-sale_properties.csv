@@ -1,9 +1,4 @@
 listing_number,title,price,location,description,bedrooms,bathrooms,parking_spaces,erf_size
-115409217,2 Bedroom House,1450000,Costa Da Gama,"2 Bedroom House for sale in Costa Da Gama - Cape TownBank Mandated Property.
-
-Why Buyers Buy Properties on the EasySell Programme:
-
-EasySell is a private sale programme, designed to ",2,1,1,200
 115622394,2 Bedroom Apartment,2300000,Wynberg Upper,"2 Bedroom Apartment / flat for sale in Wynberg Upper - Cape TownThis newly built, 2nd floor apartment features 2 bedrooms, 2 bathrooms, and an 8sqm ",2,2,2,85
 115622368,2 Bedroom Townhouse,1499000,Muizenberg,"2 Bedroom Townhouse for sale in Muizenberg - Cape TownWelcome to your perfect seaside retreat!
 Nestled in the tranquil and secure estate of ",2,1,3,83
@@ -13,6 +8,11 @@ Nestled in the tranquil and secure estate of ",2,1,3,83
 115621963,2 Bedroom Apartment,11700000,Gardens,"2 Bedroom Apartment / flat for sale in Gardens - Cape Town?Apartments of this scale, calibre, and architectural refinement are a rarity in Cape Town’s City Bowl. Whether you’re seeking a ",2,3,2,227
 115621880,2 Bedroom Townhouse,1299000,Ottery,"2 Bedroom Townhouse for sale in Ottery - Cape TownSituated in the sought-after Devon Place complex in Ottery, this well-maintained townhouse offers a blend of comfort, style, and ",2,1,2,150
 115621617,3 Bedroom House,2655000,Maitland,"3 Bedroom House for sale in Maitland - Cape TownThis neat and spacious main house has been recently tiled and features 3 well-sized bedrooms, a fully fitted kitchen with built-in ",3,1,6,679
+115589002,0.5 Bedroom Apartment,2450000,Sea Point,"0.5 Bedroom Apartment / flat for sale in Sea Point - Cape TownPERFECT FOR AIRBNB
+Welcome to your new oasis in our beautiful city. 
+
+KEY FEATURES
+Fully renovated and experience contemporary living ",0.5,1,,43
 114429952,1 Bedroom Apartment,950000,Southfield,"1 Bedroom Apartment / flat for sale in Southfield - Cape TownWelcome to our sole mandate! 
 
 Great investment property with high rental yield or perfect first time home. 
@@ -34,7 +34,6 @@ Why Buyers Buy Properties on the EasySell Programme:
 
 EasySell is a private sale programme, designed to ",2,1,1,200
 115620362,3 Bedroom House,1650000,Retreat,"3 Bedroom House for sale in Retreat - Cape TownStep into this stylish and well-maintained 3-bedroom home, where modern design meets everyday comfort. Boasting a spacious open-plan ",3,2,3,250
-111067861,3 Bedroom Apartment,6500000,Camps Bay,"3 Bedroom Apartment / flat for sale in Camps Bay - Cape TownThis beautifully renovated and neat three bedroom, two bathroom apartment is 127 square meters and enjoys secure, unobstructed views ",3,2,1,127
 115588129,Surdo Prop,2150000,Kenilworth Upper,"2 Bedroom Apartment / flat for sale in Kenilworth Upper - Cape TownLocated adjacent to the heart of highly sought-after Kenilworth Upper, this delightful 2-bedroom, 1-bathroom apartment offers a blend of convenience, comfort, and charm for first time home-owners, investors or ",2,1,2,103
 115464081,Veliciae Luxury Real Estate,17350000,Camps Bay,"8 Bedroom House for sale in Camps Bay - Cape TownPrice Excludes VAT - VAT Applicable 
 
@@ -64,6 +63,9 @@ An exceptional opportunity to own a luxury waterfront apartment at an unbeatable
 
 This beautifully renovated 2-bedroom, both en-suite unit boasts a modern open-plan kitchen, dining, and lounge area, seamlessly leading to a spacious terrace ",2,2,2,129
 115485856,Imagine Properties,985000,Diep River,1 Bedroom Apartment / flat for sale in Diep River - Cape TownSole Mandate - Avondale Gardens is one of the most sought after complexes in Plumstead/Diep River. The stunning family friendly complex offers a communal swimming pool and tennis courts. Safety is a priority with 24 hr security ,1,1,1,41
+115361413,Constantia Valley Estates,1950000,Muizenberg,"3 Bedroom House for sale in Muizenberg - Cape Town""Price Includes Vat so no Transfer Duty payable""
+
+This sunny & spacious 3 bedroomed, 2 bath roomed home boasts modern and spacious double volume open plan living area with good flow to covered patio and garden ",3,2,2,320
 115468563,Constantia Valley Estates,3250000,Kenilworth Upper,"2 Bedroom Apartment / flat for sale in Kenilworth Upper - Cape TownExclusive mandate.
 This stylish sunny light and bright north facing GROUND FLOOR apartment situated in the highly sought after and well run Dennekamp complex.
 
@@ -78,8 +80,6 @@ New release. Exclusive instruction.
 Discover the perfect blend of space & comfort with this 5-bedroom, 3-bathroom home.
 
 Situated on an expansive double erven, this property offers unparalleled versatility and potential for family ",5,3,7,1
-115478400,ATCB Real Estate,2600000,Belhar,"6 Bedroom House for sale in Belhar - Cape Townscroll down for VIDEO 
-This exceptional property, located in the sought-after area of Old Belhar, offers the perfect blend of comfort, style, and outdoor living. Situated on a generous 829m² plot, this home is ideal for a ",6,3,6,829
 115544633,RE/MAX Property Associates - Western Cape,1620000,Pinelands,"1 Bedroom Apartment / flat for sale in Pinelands - Cape TownSole mandate:
 
 This charming, ground floor, garden apartment is situated in a Sectional Title apartment block called Culemborg.   The building is located in central Pinelands and is just a short walk to Howard Centre with all its amenities.
@@ -93,6 +93,11 @@ Discover Your Coastal Retreat - Escape to your very own slice ",1,1,1,61
 Kitchen 
 Open plan ",5,4,5,507
 115547944,Rolix Real Estate,25950000,Claremont Upper,"4 Bedroom House for sale in Claremont Upper - Cape TownTop of Torquay – The Final Home in an Exclusive Four-Home Estate | No Transfer Duty |
+
+Designed by Architect Gerd Weideman
+
+The last available home in this exclusive four-residence estate, 19 on Torquay offers a balance of modern, functional living immersed in nature and ",4,5.5,3,699
+115311436,Rolix Real Estate,25950000,Claremont Upper,"4 Bedroom House for sale in Claremont Upper - Cape TownTop of Torquay – The Final Home in an Exclusive Four-Home Estate | No Transfer Duty |
 
 Designed by Architect Gerd Weideman
 
@@ -129,14 +134,9 @@ A great ",3,2,3,425
 115613608,3 Bedroom Apartment,4900000,Sea Point,"3 Bedroom Apartment / flat for sale in Sea Point - Cape TownSole, Exclusive Mandate
 
 Excellent Air B&B investment property, enjoying amazing ",3,1.5,2,121
-115395830,4 Bedroom House,2595000,Plumstead,"4 Bedroom House for sale in Plumstead - Cape TownThis spacious family home has a lot of accommodation for a growing family! 
-4 bedrooms ",4,3,2,172
 115508294,Sotheby's International Realty - Atlantic Seaboard & City Bowl,2860000,Cape Town City Centre,"2 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownThis 129sqm two-bedroom, two-bathroom apartment in Cape Town’s city centre is the perfect combination of space, style, and investment potential. With an open-plan design that invites natural light, it’s ideal for modern city living or high-performing short-term rentals.
 
 Both ",2,2,1,129
-115406182,2 Bedroom Apartment,6850000,Sea Point,"2 Bedroom Apartment / flat for sale in Sea Point - Cape TownExclusive to Sotheby's International Realty.
-
-This stunning two-bedroom ",2,2,1,90
 115557554,Rolix Real Estate,14450000,Camps Bay,"4 Bedroom House for sale in Camps Bay - Cape TownPlease send message for a video tour.
 Welcome – a newly renovated family home radiating warmth and charm with an elegant Asian-inspired design.
 
@@ -146,6 +146,8 @@ This property boasts partial sea views and stunning mountain vistas, creating a 
 115552826,2 Bedroom Apartment,6850000,Sea Point,"2 Bedroom Apartment / flat for sale in Sea Point - Cape TownExclusive to Sotheby's International Realty.
 
 This stunning two-bedroom ",2,2,1,90
+115408137,2 Bedroom Apartment,1395000,Costa Da Gama,"2 Bedroom Apartment / flat for sale in Costa Da Gama - Cape TownSole and Exclusive Mandate
+This immaculate 2nd-floor corner apartment in the ",2,1,1,62
 115601850,Commercial Property,6000000,Cape Town City Centre,Commercial property for sale in Cape Town City Centre - Cape TownA rare freestanding building on sought-after Loop Street is now available for sale. ,,,,300
 115619975,3 Bedroom House,1850000,Pelican Park,3 Bedroom House for sale in Pelican Park - Cape TownThis well-maintained home is ideal for families or those who love space and ,3,2,3,375
 115620820,2 Bedroom Apartment,1395000,Costa Da Gama,"2 Bedroom Apartment / flat for sale in Costa Da Gama - Cape TownSole and Exclusive Mandate
@@ -191,7 +193,6 @@ The Fibonacci redefines student accommodation in Cape Town, offering thoughtfull
 
 This tenanted ",,,,627
 115576049,Commercial Property,10995000,Cape Town City Centre,Commercial property for sale in Cape Town City Centre - Cape TownSole mandate. Elevate your business with this exceptional office space in the heart of ,,,,653
-115375571,Commercial Property,4837500,Cape Town City Centre,"Commercial property for sale in Cape Town City Centre - Cape TownThe Rubik, located on the corner of Loop and Riebeek Street, offers remarkable ",,,,129
 115545241,Commercial Property,4837500,Cape Town City Centre,"Commercial property for sale in Cape Town City Centre - Cape TownThe Rubik, located on the corner of Loop and Riebeek Street, offers remarkable ",,,,129
 115607897,2 Bedroom Apartment,2100000,Kenilworth,"2 Bedroom Apartment / flat for sale in Kenilworth - Cape TownYellowwoods is a small, modern complex of 24 apartments
 56sqm apartment with a South ",2,2,1,56
@@ -208,6 +209,9 @@ The Fibonacci redefines student accommodation in Cape Town, offering thoughtfull
 115597278,3 Bedroom House,2600000,Salt River,"3 Bedroom House for sale in Salt River - Cape Town3 Bed 2 bath for sale in culturally rich Salt River
 
 Semi-detached double storey home ",3,2,,127
+115333495,Commercial Property,11800000,Observatory,"Commercial property for sale in Observatory - Cape TownIdeally situated on Main Road, Observatory (corner of Polo Road)  
+
+This tenanted ",,,,627
 115557287,Revo Property,1850000,Mowbray,"2 Bedroom Apartment / flat for sale in Mowbray - Cape TownConvenience, Comfort, and Community—All in One Place
 
 The Fibonacci redefines student accommodation in Cape Town, offering thoughtfully crafted spaces to support every aspect of student life. From sleek studio apartments to spacious two-bedroom units, each apartment combines ",2,1,,31
@@ -223,182 +227,3 @@ The spacious ",3,2,1,405
 115608699,Keller Williams Explore Atlantic,4950000,Claremont Upper,"3 Bedroom House for sale in Claremont Upper - Cape TownWelcome to this stunning 3-bedroom home, perfectly situated in the heart of Claremont Upper. This neat and modern property offers the ideal blend of location, convenience, and charm, making it perfect for first-time homebuyers or small families.
 
 *Sole & Exclusive ",3,2.5,1,334
-115612933,2 Bedroom Apartment,2195000,Pinelands,"2 Bedroom Apartment / flat for sale in Pinelands - Cape TownSUNNY, LIGHT AND BRIGHT RETIREMENT APARTMENT
-Looking to retire? This 2bed/2 Bath unit ",2,2,1,58
-115588289,3 Bedroom House,17500000,Gardens,"3 Bedroom House for sale in Gardens - Cape TownExperience luxury living in one of Cape Town’s most coveted locations, nestled at the ",3,3.5,2,930
-112556539,Commercial Property,19000000,Salt River,Commercial property for sale in Salt River - Cape TownPrime Commercial Property for Sale in Salt River – own a piece of Cape Town history and ,,,,480
-115476729,Robshaw Property Group,11900000,Oranjezicht,"7 Bedroom House for sale in Oranjezicht - Cape TownPerched high up in Oranjezicht, this north-facing, three-storey residence offers breathtaking panoramic views of Table Mountain, Lion's Head, and the vibrant City Bowl. Situated in one of Cape Town's most desirable neighbourhoods, this home is a rare blend of luxury ",7,7,4,480
-115527120,1 Bedroom Apartment,1095000,Kenilworth,"1 Bedroom Apartment / flat for sale in Kenilworth - Cape TownProudly presented by 1 Nine 5 Properties under an Exclusive Sole Mandate.
-
-An ",1,1,1,41
-115440119,Surdo Prop,3095000,Rondebosch Village,"2 Bedroom House for sale in Rondebosch Village - Cape TownNestled in the heart of the sought-after Rondebosch Village in Cape Town’s Southern Suburbs, this delightful two-bedroom, one-bathroom cottage offers the perfect blend of comfort and character.
-
- With its inviting open-plan living area, this home provides a warm and ",2,1,1,139
-115514433,2 Bedroom Apartment,895000,Muizenberg,2 Bedroom Apartment / flat for sale in Muizenberg - Cape TownHere is a great opportunity for a first time buyer looking to get into the property ,2,1,1,45
-115594848,2 Bedroom Apartment,1295000,Diep River,"2 Bedroom Apartment / flat for sale in Diep River - Cape TownThis sunny two-bedroom apartment is modern and practical. 
-Open-plan lounge/dining area ",2,1,1,67
-115336214,Revo Property,3995000,Wynberg Upper,"3 Bedroom House for sale in Wynberg Upper - Cape TownThis exquisite semi - detached triplex, one of just four exclusive units at The Chelsea, is a modern, elegant and charming home. 
-
-Basement level:  2 parking bays and private laundry room with plenty of storage space 
-Street ",3,2,2,135
-115618230,2 Bedroom Apartment,4995000,Foreshore,"2 Bedroom Apartment / flat for sale in Foreshore - Cape TownSole & Exclusive 
-
-Located in the highly sought-after Yacht Club in the Foreshore ",2,2,1,90
-115591266,2 Bedroom Townhouse,2950000,Marina Da Gama,"2 Bedroom Townhouse for sale in Marina Da Gama - Cape TownWake up to breath-taking Marina views in this beautifully renovated home, designed for ",2,1,1,258
-115582324,Commercial Property,2100000,Gardens,Commercial property for sale in Gardens - Cape TownThe Design of this unit is an Apartment but can be used as an office or the ideal Work ,,,,79
-115584305,3 Bedroom House,1745000,Woodstock,"3 Bedroom House for sale in Woodstock - Cape TownThis renovated 3-bedroom cottage on Wright Street, Woodstock, presents an excellent ",3,1,,105
-115110668,Baker Street Properties,15000000,Gardens,"Commercial property for sale in Gardens - Cape TownExperience sophistication in this modern office space, where comfort and professionalism come together to create the ideal working environment.
-
-As you enter, a spacious reception area warmly greets visitors, setting a ",,,,827
-115545322,Seraphim Realtors,899000,Bonteheuwel,"2 Bedroom House for sale in Bonteheuwel - Cape TownThis well-maintained 2-bedroom home is ready for its new owner! Featuring spacious living areas, a fitted kitchen, and a family bathroom, this property offers both comfort and convenience.
-
-Situated on a large, fully enclosed plot, the home includes a carport and ample ",2,1,1,373
-115469673,Robshaw Property Group,11900000,Oranjezicht,"7 Bedroom House for sale in Oranjezicht - Cape TownPerched high up in Oranjezicht, this north-facing, three-storey residence offers breathtaking panoramic views of Table Mountain, Lion's Head, and the vibrant City Bowl. Situated in one of Cape Town's most desirable neighbourhoods, this home is a rare blend of luxury ",7,7,4,480
-115583195,Commercial Property,POA,Mowbray,"Commercial property on auction in Mowbray - Cape TownThe auction will be held at The Houghton Golf Club on the 12 March 2025 at 11h00, and ",,,,477
-115597770,2 Bedroom Apartment,4400000,Green Point,"2 Bedroom Apartment / flat for sale in Green Point - Cape TownDiscover this exceptional apartment in the heart of Green Point, offering the perfect ",2,1,1,80
-110037152,Vacant Land,6350000,Tamboerskloof,"Vacant land / plot for sale in Tamboerskloof - Cape TownDiscover this rare gem in the sought-after Tamboerskloof neighborhood, perfectly ",,,,254
-106771543,4 Bedroom House,6300000,Bergvliet,"4 Bedroom House for sale in Bergvliet - Cape TownSOLE MANDATE
-Everything about this 300sqm home, set on a 1000sqm erf, feels right. The ",4,2.5,2,1
-115605619,3 Bedroom Apartment,1649000,Diep River,"3 Bedroom Apartment / flat for sale in Diep River - Cape TownHere is the perfect flat in the sort after area of Diep River , the flat has 3 bedrooms ",3,1,,87
-115283393,Mark Anthony Properties,1599000,Montana,"3 Bedroom House for sale in Montana - Cape TownThis Large Property is situated in Downing Street,Montana.The Property boasts:Large Grounds,3 Bedrooms,main-en-suite,spacious lounge(Fire-Place),separate dining area,large fitted kitchen +family bathroom.
-There is 2 ",3,2,10,513
-115444296,Pillay Properties,1800000,Cape Town City Centre,"1 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownLocated on the foreshore in the award winning City of Cape Town, this 35m² space offers a cozy, apartment-style setup perfect for urban living. Thoughtfully designed, it features an open-plan layout with a comfortable bed, a seating area, and modern finishes ",1,1,,35
-115544861,2 Bedroom Apartment,1295000,Ottery,"2 Bedroom Apartment / flat for sale in Ottery - Cape TownModern top-floor apartment with balcony. 
-Open-plan contemporary kitchen with electric ",2,2,1,51
-115613263,3 Bedroom House,9500000,Fresnaye,"3 Bedroom House for sale in Fresnaye - Cape TownEXCLUSIVE MANDATE 
-Situated in a quiet road in lower Fresnaye, this fully renovated ",3,3,3,220
-115574985,1 Bedroom Apartment,3450000,Observatory,"1 Bedroom Apartment / flat for sale in Observatory - Cape Town*Exclusive Dual Mandate*
-
-Experience contemporary living in this stylish 1-bedroom ",1,1,1,49
-115575133,1 Bedroom Apartment,2950000,Observatory,"1 Bedroom Apartment / flat for sale in Observatory - Cape Town*Exclusive Dual Mandate*
-
-Experience contemporary living in this stylish 1-bedroom ",1,1,1,47
-115565779,3 Bedroom Apartment,3495000,Kenilworth Upper,"3 Bedroom Apartment / flat for sale in Kenilworth Upper - Cape TownLocated in the sought-after The Cotswolds, this ground-floor three-bedroom, two-bathroom ",3,2,1,187
-115547302,Commercial Property,9500000,Observatory,"Commercial property for sale in Observatory - Cape TownThis two-story, 1,457m² property in Waverley Business Park presents a unique ",,,,1
-115492042,Pillay Properties,1800000,Cape Town City Centre,"1 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownLocated on the foreshore in the award winning City of Cape Town, this 35m² space offers a cozy, apartment-style setup perfect for urban living. Thoughtfully designed, it features an open-plan layout with a comfortable bed, a seating area, and modern finishes ",1,1,,35
-115570955,1 Bedroom Apartment,649500,Pinelands,"1 Bedroom Apartment / flat for sale in Pinelands - Cape TownRetire in the peace and quiet of Pinelands Grove.
-PG has beautifully maintained gardens ",1,1,,20
-115562205,3 Bedroom Apartment,6950000,Fresnaye,"3 Bedroom Apartment / flat for sale in Fresnaye - Cape TownDuplex Towhouse Living in Sought-After Location
-
-This townhouse offers the full package. ",3,2.5,1,138
-115564371,3 Bedroom House,3800000,Diep River,3 Bedroom House for sale in Diep River - Cape TownThis renovated family-sized home with a home office is situated in a historical part of ,3,1,5,697
-115574708,1 Bedroom Apartment,3450000,De Waterkant,1 Bedroom Apartment / flat for sale in De Waterkant - Cape TownWe are delighted to present this exquisite luxury double-volume loft apartment ,1,1,1,58
-115612496,4 Bedroom House,2450000,Grassy Park,"4 Bedroom House for sale in Grassy Park - Cape TownExclusive listing
-
-Nestled in the heart of Grassy Park, this property has so much to ",4,3,7,467
-115607026,7 Bedroom House,2399000,Belhar,7 Bedroom House for sale in Belhar - Cape TownThis property offers the perfect setup for extended family living or rental income ,7,3,1,448
-115572444,1 Bedroom Apartment,2200000,Cape Town City Centre,1 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownModern studio teeming with natural light in one of Cape Town CBD's most sought-after ,1,1,1,48
-115563603,Commercial Property,POA,Rondebosch,"Commercial property on auction in Rondebosch - Cape TownThe auction will be held at The Houghton Golf Club on the 12 March 2025 at 11h00, and ",,,,690
-115544008,5 Bedroom House,5995000,Bergvliet,"5 Bedroom House for sale in Bergvliet - Cape TownStunning dual living property with 2 homes in one. Some finishing off required, but ",5,4,6,1
-115577193,4 Bedroom Apartment,16000000,Tamboerskloof,"4 Bedroom Apartment / flat for sale in Tamboerskloof - Cape TownSituated high up in Tamboerskloof, this revolutionary architectural masterpiece has ",4,3,2,365
-115575983,4 Bedroom House,11500000,Silvertree Estate,"4 Bedroom House for sale in Silvertree Estate - Cape TownThis magnificent residence is a true gem, nestled in Cape Town’s prestigious Silvertree ",4,4,7,611
-115584407,Industrial Property,POA,Diep River,"Industrial property for sale in Diep River - Cape TownSituated in a popular secure 24hour manned (with boom access), park. The factory portion ",,,,1
-115570812,1 Bedroom Apartment,1295000,Pinelands,"1 Bedroom Apartment / flat for sale in Pinelands - Cape Town**RETIREMENT APARTMENT**
-This is affordable and secure Retirement Living at it's ",1,1,,36
-115613079,3 Bedroom House,1795000,Ottery,"3 Bedroom House for sale in Ottery - Cape TownQuay 1 International Reality Presents | Asking Price: R1 795 000
-
-Exclusive ",3,2,2,241
-112004534,Commercial Property,7689000,Woodstock,"Commercial property for sale in Woodstock - Cape TownWoodstock Quarter is one of Cape Town’s newest mixed-use developments, ideally located ",,,,433
-115597816,1 Bedroom Apartment,1750000,Woodstock,1 Bedroom Apartment / flat for sale in Woodstock - Cape TownThis stunning top-floor apartment in The Iron Works is larger than most in the building ,1,1,1,65
-115527959,Commercial Property,24975000,Cape Town City Centre,"Commercial property for sale in Cape Town City Centre - Cape TownAAA Grade office space For Sale at the popular The Rubik in Cape Town City Centre.
-
-The ",,,,677
-115563333,Commercial Property,POA,Observatory,"Commercial property on auction in Observatory - Cape TownThe auction will be held at The Houghton Golf Club on the 12 March 2025 at 11h00, and ",,,,1
-115576372,1 Bedroom Apartment,2795000,Cape Town City Centre,"1 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownSole & Exclusive Mandate  
-
-On the edge of Cape Town’s city bowl, this bright and ",1,1,1,81
-115527943,Commercial Property,78384000,Cape Town City Centre,"Commercial property for sale in Cape Town City Centre - Cape TownAAA Grade office space For Sale at the popular The Rubik in Cape Town City Centre.
-
-The ",,,,2
-115297390,2 Bedroom Apartment,3650000,Sea Point,"2 Bedroom Apartment / flat for sale in Sea Point - Cape TownExclusive to Sotheby's International Realty.
-
-This excellently planed 2-bedroom ",2,2,1,71
-115556257,2 Bedroom Apartment,1450000,Pinelands,"2 Bedroom Apartment / flat for sale in Pinelands - Cape TownWelcome to this charming 2-bedroom semi-detached home, perfect for comfortable living in ",2,1,1,49
-115555579,2 Bedroom Townhouse,1550000,Heathfield,2 Bedroom Townhouse for sale in Heathfield - Cape TownThis 2-bedroom townhouse in Heathfield offers comfortable living with easy access to ,2,1,1,1
-115582263,3 Bedroom House,4500000,Rondebosch,"3 Bedroom House for sale in Rondebosch - Cape Town15 Malcolm Road, Rondebosch
-
-
-Exclusive Mandate
-
-The fixer upperer you have been waiting ",3,1,3,560
-115504613,5 Bedroom House,15950000,Constantia,"5 Bedroom House for sale in Constantia - Cape TownThis outstanding property, located in one of Constantia Upper’s most prestigious and ",5,5,2,3
-115552813,2 Bedroom Apartment,3650000,Sea Point,"2 Bedroom Apartment / flat for sale in Sea Point - Cape TownExclusive to Sotheby's International Realty.
-
-This excellently planed 2-bedroom ",2,2,1,71
-115622127,6 Bedroom House,2395000,Ottery,"6 Bedroom House for sale in Ottery - Cape TownQuay 1 International Realty Presents | Asking Price: R2 395 000
-
-Exclusive ",6,3,3,421
-115564343,1 Bedroom Apartment,1400000,Claremont,"1 Bedroom Apartment / flat for sale in Claremont - Cape TownMODERN ""LOCK-UP & GO"" APARTMENT  
-Stylish | Secure | Investment ",1,1,,39
-115605879,6 Bedroom House,2395000,Ottery,"6 Bedroom House for sale in Ottery - Cape TownQuay 1 International Realty Presents | Asking Price: R2 395 000
-
-Exclusive ",6,3,3,421
-115479138,5 Bedroom House,2900000,Walmer Estate,"5 Bedroom House for sale in Walmer Estate - Cape TownA spacious semi-detached townhouse for sale in in vibrant Walmer Estate. 
-
-This secure ",5,3,1,226
-115570904,2 Bedroom Apartment,1750000,Zonnebloem,"2 Bedroom Apartment / flat for sale in Zonnebloem - Cape TownInvestment Opportunity with Guaranteed Rentals, Luxurious Features, at Castle Rock ",2,2,1,79
-115481665,2 Bedroom Apartment,1470000,Observatory,"2 Bedroom Apartment / flat for sale in Observatory - Cape TownGround Floor Apartment – Ideal for Young Professionals or Students
-This well-located ",2,1,1,84
-115587230,2 Bedroom House,1395000,Lansdowne,"2 Bedroom House for sale in Lansdowne - Cape TownCharming Semi-Detached Home 
-
-This delightful two-bedroom semi-detached home is ",2,1,2,130
-115549696,2 Bedroom Apartment,5795000,Foreshore,"2 Bedroom Apartment / flat for sale in Foreshore - Cape TownSeldom do these units with large balconies come to market.
-Modern apartment in the ",2,2,1,88
-115589043,2 Bedroom Apartment,3875000,Vredehoek,2 Bedroom Apartment / flat for sale in Vredehoek - Cape TownQuay 1 International is proud to exclusively bring you this spacious 2-bedroom ,2,2,2,70
-115549255,3 Bedroom House,1795000,Salt River,"3 Bedroom House for sale in Salt River - Cape TownThis property oozes with potential, from the front garden to the backyard. Situated as a ",3,1,1,261
-115608577,Vacant Land,39995000,Bakoven,"Vacant land / plot for sale in Bakoven - Cape TownBuild your Dream Home on this piece of land that offers breathtaking views!
-
-Hugging the waters-edge this vacant piece of land is ",,,,704
-115597723,5 Bedroom House,9200000,Mowbray,"5 Bedroom House for sale in Mowbray - Cape TownAn old-world beauty, this magnificent home built in 1896 exudes charm and character and ",5,4,6,991
-115546028,3 Bedroom House,2795000,Rylands,"3 Bedroom House for sale in Rylands - Cape TownSole Exclusive Mandate 
-
-Prime location – Perfect for Families or Investors!
-
-This ",3,2,5,695
-115607744,2 Bedroom Apartment,6500000,De Waterkant,"2 Bedroom Apartment / flat for sale in De Waterkant - Cape TownSPACIOUS LIGHT & BRIGHT TWO BEDROOM APARTMENT WITH PRIME LOCATION
-TWO SECURE PARKING ",2,2,2,78
-115539468,2 Bedroom House,1450000,Grassy Park,"2 Bedroom House for sale in Grassy Park - Cape TownReady to find the perfect place to call home? Look no further!
-
-This neat and ",2,1,3,527
-115581524,2 Bedroom Apartment,5800000,Cape Town City Centre,"2 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownIntroducing TENONV, our latest development, nestled at 10 Vredenburg Lane, in the heart ",2,3,,97
-115581446,1 Bedroom Apartment,3095000,Cape Town City Centre,"1 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownIntroducing TENONV, our latest development, nestled at 10 Vredenburg Lane, in the heart ",1,1,,45
-115546953,2 Bedroom Apartment,1400000,Claremont,"2 Bedroom Apartment / flat for sale in Claremont - Cape TownMove right into this beautifully finished 2-bedroom apartment, offering a perfect blend ",2,1,1,79
-115619997,3 Bedroom House,7395000,Wynberg Upper,3 Bedroom House for sale in Wynberg Upper - Cape TownLocated in a prime position of the Chelsea Village and on the main South Peninsular Wine route. It is within walking distance to ,3,2,4,279
-115612706,1 Bedroom Apartment,2400000,Oranjezicht,"1 Bedroom Apartment / flat for sale in Oranjezicht - Cape TownON SHOW BY APPOINTMENT | SUNDAY, 23 FEBRUARY 2025
-
-This ground floor 'art deco' apartment is situated in a quiet, treed street ",1,1,,55
-115541080,3 Bedroom Townhouse,1550000,Plumstead,3 Bedroom Townhouse for sale in Plumstead - Cape TownThis Beautiful Duplex starter home or next investment is situated in the Leafy suburb of ,3,2,2,77
-115544540,2 Bedroom House,1850000,Observatory,"2 Bedroom House for sale in Observatory - Cape Town“FAIRVIEW” is the name of this house, next door is “MOUNTVIEW”. More than 100 years of ",2,1,1,135
-115584056,Industrial Property,POA,Diep River,Industrial property for sale in Diep River - Cape TownThis factory/warehouse is situated in a popular secure 24hour manned (with boom access) ,,,,2
-115613896,1 Bedroom Apartment,4750000,Green Point,"1 Bedroom Apartment / flat for sale in Green Point - Cape TownInviting light bright and sunny. Spacious north facing with 180 degree sea views. 
-
-Double volume loft style with Entertainment sized ",1,2,2,86
-115472981,2 Bedroom Apartment,11650000,Green Point,"2 Bedroom Apartment / flat for sale in Green Point - Cape TownSOLE MANDATE
-
-This luxurious lock up and go penthouse on Cape Town’s vibrant Golden ",2,2.5,2,167
-115468324,1 Bedroom Apartment,3495000,Cape Town City Centre,1 Bedroom Apartment / flat for sale in Cape Town City Centre - Cape TownWelcome to your secret oasis in the heart of Cape Town! This stunning 1-bedroom duplex ,1,1,1,140
-115550872,2 Bedroom Apartment,1395000,Ottery East,"2 Bedroom Apartment / flat for sale in Ottery East - Cape TownSole and Exclusive Mandate
-Step into comfort and convenience with this stunning ",2,2,1,51
-115564073,2 Bedroom House,3250000,Wynberg Upper,"2 Bedroom House for sale in Wynberg Upper - Cape TownNestled in a serene cul-de-sac in the sought-after Upper Wynberg area, this delightful ",2,2,1,269
-115600900,4 Bedroom House,36995000,Camps Bay,"4 Bedroom House for sale in Camps Bay - Cape TownIdeally situated just meters from the seafront, this exceptional home boasts panoramic views of Lion’s Head and Table Mountain. ",4,5,4,633
-115615723,2 Bedroom Apartment,4500000,Sea Point,"2 Bedroom Apartment / flat for sale in Sea Point - Cape TownPrime Location | Exclusive Mandate
-ON SHOW - 4 MARCH (3PM - 4PM by appointment)
-ON SHOW - 5 MARCH (3PM- 4PM by appointment)
-
-This ",2,1.5,1,104
-115605368,2 Bedroom House,1495000,Retreat,2 Bedroom House for sale in Retreat - Cape TownHere is a perfect lock up and go property in the sort after pocket of houses in Retreat ,2,1,3,109
-115603743,2 Bedroom Apartment,4500000,Sea Point,"2 Bedroom Apartment / flat for sale in Sea Point - Cape TownPrime Location | Exclusive Mandate
-ON SHOW - 4 MARCH (3PM - 4PM by appointment)
-ON SHOW - 5 MARCH (3PM- 4PM by appointment)
-
-This ",2,1.5,1,104
-115576032,Industrial Property,POA,Maitland,Industrial property on auction in Maitland - Cape TownThis premium property is fully operational and ready to meet your business needs. With ,,,,1
-115140606,Imagine Properties,2595000,Rondebosch,"3 Bedroom Apartment / flat for sale in Rondebosch - Cape TownRare and unique, 4 level Penthouse in prime location. Priced to sell!! 
-
-Currently tenanted at R20 000 a month for buy to let investors.
-
-See video walkthrough attached.
-
-Ideal for students and young professionals. 
-
-The complex ",3,2,2,122
