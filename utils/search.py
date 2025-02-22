@@ -41,7 +41,7 @@ class SearchSuggestions:
                 self.json_file_obj = self.read_json(norm_suggest_file)
 
     def get_property_suggestions(
-        self, search_text: str, search_type: str = "for-sale"
+        self, search_text: str
     ) -> List[Dict]:
         self.load_suggestions()
 

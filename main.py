@@ -4,12 +4,19 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from contextlib import asynccontextmanager
+<<<<<<< HEAD
+=======
+import os
+>>>>>>> 54ea97b4cfd44e9e7270bca5f4715bebb5495c10
 
 from utils.config import logging
 from utils.search import SearchSuggestions
 
 from web_scraper.main import scrape_properties
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ea97b4cfd44e9e7270bca5f4715bebb5495c10
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -32,23 +39,40 @@ async def read_root(request: Request):
 
 @app.post("/search", response_class=HTMLResponse)
 async def search(
-    request: Request, search_text: str = Form(...), search_type: str = Form(...)
+    request: Request, search_text: str = Form(...)
 ):
-    suggestions = search_suggestions.get_property_suggestions(search_text, search_type)
+    suggestions = search_suggestions.get_property_suggestions(search_text)
     return templates.TemplateResponse(
         "index.html", {"request": request, "suggestions": suggestions}
     )
 
 
 @app.post("/download")
-async def download(request: Request, selected_suggestions: list[str] = Form(...)):
+async def download(
+    request: Request, 
+    selected_suggestions: list[str] = Form(...),
+    search_type: str = Form(...)
+):
     logging.info(
-        f"Downloading properies: {selected_suggestions} {type(selected_suggestions)}"
+        f"Starting download of properties for the following suggestions: {selected_suggestions}"
     )
 
+<<<<<<< HEAD
     for suggestion in selected_suggestions:
         # https://www.property24.com/for-sale/advanced-search/results?sp=cid%3d2462
         base_url = f"https://www.property24.com/
+=======
+    if os.path.exists("properties.csv"):
+        os.remove("properties.csv")
+
+    if not selected_suggestions:
+        return {"error": "No properties selected"}
+        
+    df = await scrape_properties(selected_suggestions, search_type)
+    df.to_csv("properties.csv", index=False)
+    return FileResponse("properties.csv")
+
+>>>>>>> 54ea97b4cfd44e9e7270bca5f4715bebb5495c10
 
 
 if __name__ == "__main__":

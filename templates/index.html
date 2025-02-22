@@ -28,6 +28,21 @@
                 required
               />
             </div>
+            <button class="btn btn-primary" type="submit">
+              Scrape Properties
+            </button>
+          </form>
+          {% if error %}
+          <p class="error">{{ error }}</p>
+          {% endif %}
+        </section>
+
+        {% if suggestions %}
+        <section class="suggestions-section">
+          <h2>Properties</h2>
+          <p><strong>{{ suggestions|length }}</strong> properties found.</p>
+
+          <form class="suggestions-form" action="/download" method="post">
             <div class="form-group">
               <fieldset>
                 <div class="radio-group">
@@ -53,21 +68,6 @@
                 </div>
               </fieldset>
             </div>
-            <button class="btn btn-primary" type="submit">
-              Scrape Properties
-            </button>
-          </form>
-          {% if error %}
-          <p class="error">{{ error }}</p>
-          {% endif %}
-        </section>
-
-        {% if suggestions %}
-        <section class="suggestions-section">
-          <h2>Properties</h2>
-          <p><strong>{{ suggestions|length }}</strong> properties found.</p>
-
-          <form class="suggestions-form" action="/download" method="post">
             <ul class="suggestions-list">
               {% for suggestion in suggestions %}
               <li class="suggestion-item">
