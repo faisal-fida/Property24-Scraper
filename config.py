@@ -12,6 +12,33 @@ suggest_file = "utils/input/suggestions.json"
 norm_suggest_file = "utils/input/norm_suggestions.json"
 
 
+async def get_user_input() -> tuple[str, int, str]:
+    """Get and validate user input for scraping parameters"""
+    search_query = input("Enter location to search (default: cape town): ").strip() or "Cape Town"
+
+    try:
+        pages = int(input("Enter number of pages to scrape (default: 10): ").strip() or 10)
+    except ValueError:
+        logging.warning("Invalid page number, using default value of 10")
+        pages = 10
+
+    while True:
+        search_type = input("Select search type (1: Sale, 2: Rent): ").strip()
+        if search_type in ("1", "2"):
+            search_type = "for-sale" if search_type == "1" else "to-rent"
+            break
+        logging.error("Invalid input. Please enter 1 or 2")
+
+    logging.info(
+        f"Starting scraping process:\n"
+        f"Location: {search_query}\n"
+        f"Type: {search_type}\n"
+        f"Pages to scrape: {pages}"
+    )
+
+    return search_query, pages, search_type
+
+
 def build_url(search_query: str, search_type: str = "for-sale") -> str:
     """Build search URL for given query"""
     normalized_query = search_query.lower().strip().replace(" ", "")

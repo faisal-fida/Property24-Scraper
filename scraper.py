@@ -41,7 +41,7 @@ class WebScraper:
         """Fetch content from a single page"""
         try:
             await page.goto(url, wait_until="networkidle")
-            await page.wait_for_selector("div.property-card")
+            await page.wait_for_selector("body", timeout=10000)
             return await page.content()
         except Exception as e:
             logging.error(f"Error fetching {url}: {str(e)}")
